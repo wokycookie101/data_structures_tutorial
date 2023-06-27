@@ -18,7 +18,7 @@ To start, we would establish a queue within a piece of code:
 queue = list()
 ```
 
-We would then "Enqueue," an item, or add `.append()` to the end of the newly established `queue` variable.
+We would then "enqueue," an item, or add `.append()` to the end of the newly established `queue` variable.
 
 ```
 queue = list()
@@ -30,7 +30,26 @@ queue.append(8)
 print(queue) # Expected: [23, 4, 8]
 ```
 
-
-
 Interestingly, you can also "dequeue" an element within Python lists. Similar to if the person behind you in line walked out of the line to go grab something else. 
 
+To "dequeue," an item from a list, we would simply just type `.pop()` after our established queue:
+
+```
+queue = list()
+
+queue.append(23)
+queue.append(4)
+queue.append(8)
+
+print(queue) # Expected: [23, 4, 8]
+
+queue.pop()
+
+print(queue) # Expected: [23, 4]
+```
+
+Notice how it took off the 8 at the end of the list? This is a simple way to simply remove an ending element. 
+
+Now, hat if you wanted to remove 23, or 4? Well guess what? That's possible too! All you have to do is put the element number within the parenthesis of the `.pop()` function!
+
+(REMEMBER! List elements start with 0, not 1. If you wanted to remove 23, you'd need to write `queue.pop(0)`. `queue.pop(1)` would remove 4.)
