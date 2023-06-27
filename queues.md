@@ -50,6 +50,24 @@ print(queue) # Expected: [23, 4]
 
 Notice how it took off the 8 at the end of the list? This is a simple way to simply remove an ending element. 
 
-Now, hat if you wanted to remove 23, or 4? Well guess what? That's possible too! All you have to do is put the element number within the parenthesis of the `.pop()` function!
+Now, what if you wanted to remove 23, or 4? Well guess what? That's possible too! All you have to do is put the element number within the parenthesis of the `.pop()` function!
 
 (REMEMBER! List elements start with 0, not 1. If you wanted to remove 23, you'd need to write `queue.pop(0)`. `queue.pop(1)` would remove 4.)
+
+```
+queue = list()
+
+queue.append(23)
+queue.append(4)
+queue.append(8)
+queue.append(75)
+queue.append(36)
+queue.append(55)
+
+print(queue) # Expected: [23, 4, 8, 75, 36, 55]
+
+queue.pop(3)
+queue.pop(0)
+
+print(queue) # Expected: [4, 8, 36, 55]
+```
