@@ -4,7 +4,7 @@
 
 When you're in a line to check out at a grocery store, you enter at the end of the line. When the person at the front of the line is ready to check out, they leave the line, and the person behind them waits their turn. You may also notice someone stand behind you, as they have also entered the back of the line, and you are now closer to the front of the line, ready to check out. 
 
-This is a real life application of a queue. We would call this a "First in, first out" sort of principle, where the person who had been there longer than the people in the queue is the one who will leave the queue first. 
+This is a real life application of a queue. We would call this a "First in, first out" sort of principle (FIFO), where the person who had been there longer than the people in the queue is the one who will leave the queue first. 
 
 ## Queues in Python
 
@@ -71,3 +71,10 @@ queue.pop(0)
 
 print(queue) # Expected: [4, 8, 36, 55]
 ```
+
+## Problem
+People are waiting in line at a doctor's office. However, the front desk people have lost track of which patients had arrived in the order that they have. Write code that will keep track of the current customers:  Greg, Janice, Tom, Sharon, Gavin, Jane, and  Alex. (This is the order they came in.) The two doctors need to see both Greg and Janice, so they need to leave the waiting room. Also, Amanda just walked in. 
+
+Write code that replicates this queue. 
+
+See the [solution](./code/patients.py) to this problem, in case you get stuck! ^_^
