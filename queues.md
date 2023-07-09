@@ -10,6 +10,8 @@ This is a real life application of a queue. We would call this a "First in, firs
 
 When we want to make a queued data structure, we're essentially implementing this principle. You would put a piece of data at the end of a called list, then the next, and so on and so forth. Then, when you want to extract data from a list, you would get the first piece of data that was put in a list. 
 
+Usually, a Queue would have Big O Notation of O(1) when you're enqueueing. When dequeueing, it would probably be more like O(n)
+
 ![Queue Graphic](images/queue.jpg)
 
 To start, we would establish a queue within a piece of code:
@@ -20,7 +22,7 @@ queue = list()
 
 We would then "enqueue," an item, or add `.append()` to the end of the newly established `queue` variable.
 
-```
+``` python
 queue = list()
 
 queue.append(23)
@@ -34,7 +36,7 @@ Interestingly, you can also "dequeue" an element within Python lists. Similar to
 
 To "dequeue," an item from a list, we would simply just type `.pop()` after our established queue:
 
-```
+``` python
 queue = list()
 
 queue.append(23)
@@ -54,7 +56,7 @@ Now, what if you wanted to remove 23, or 4? Well guess what? That's possible too
 
 (REMEMBER! List elements start with 0, not 1. If you wanted to remove 23, you'd need to write `queue.pop(0)`. `queue.pop(1)` would remove 4.)
 
-```
+``` python
 queue = list()
 
 queue.append(23)
