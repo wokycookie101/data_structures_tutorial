@@ -66,9 +66,10 @@ print(set_4.difference(set_3))
 print(set_4 - set_3)
 # Expected: Pepper, Kale
 ```
+# Problem
 
+Your cousin has been collecting different types of glass animals, and has asked you to organized them separately from sea creatures and land creatures. You've done this, but you made some mistakes along the way, and you accidentally organized some of the land animals into the sea creature list, and vice versa. 
 
+Write a sort of filter that'll single out some of the animals that aren't in their right place. Use this [code](glass_animals.py) to get started.
 
-
-
-```
+If you get really stuck, look at the [solution](glass_animals_solution.py) here!
