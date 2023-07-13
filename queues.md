@@ -77,7 +77,6 @@ print(queue) # Expected: [4, 8, 36, 55]
 If you want to fully develop the queue principle (First in, first out), you'll want to develop a class, or a function, that'll make it so that instead of just popping off the end of the queue (this is more of a stack, with the principle of first in, last out)
 
 
-```
 
 ## Problem
 People are waiting in line at a doctor's office. However, the front desk people have lost track of which patients had arrived in the order that they have. Write code that will keep track of the current customers:  Greg, Janice, Tom, Sharon, Gavin, Jane, and  Alex. (This is the order they came in.) The two doctors need to see both Greg and Janice, so they need to leave the waiting room. Also, Amanda just walked in. 
@@ -85,3 +84,5 @@ People are waiting in line at a doctor's office. However, the front desk people 
 Write code that replicates this queue. 
 
 See the [solution](./code/patients.py) to this problem, in case you get stuck! ^_^
+
+[Welcome!](welcome.md)

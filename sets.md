@@ -73,3 +73,5 @@ Your cousin has been collecting different types of glass animals, and has asked 
 Write a sort of filter that'll single out some of the animals that aren't in their right place. Use this [code](glass_animals.py) to get started.
 
 If you get really stuck, look at the [solution](glass_animals_solution.py) here!
+
+[Welcome!](welcome.md)
