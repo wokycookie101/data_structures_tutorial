@@ -155,3 +155,6 @@ Do you notice a pattern here? We're basically just rearanging the order that we 
 
 # Problem
 
+In [this code](find_numbers.py), write a method that'll be able to find the numbers 16, 1, and 20 located in this tree. 
+
+If you get stuck, here's the [solution](find_numbers_solution.py)
