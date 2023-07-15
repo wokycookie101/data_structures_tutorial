@@ -28,5 +28,130 @@ There are three types of trees in the data structure world:
 
 As you may guess, there's also a bit of a heirarchy here as well. balanced search trees ARE binary search trees, and binary search trees are binary trees. 
 
+Balanced Search Trees are the ideal trees to work with, since they make finding values inside of a tree very fast and convenient. 
+
 ## Accessing Binary Search Trees
+
+We would access the binary tree in three ways:
+
+* In-order: This means starting on the left node, then the root, then the right node. This is usually ideal for binary search trees. 
+
+* Pre-order: This means starting at the root, then going left, then going right
+
+* Post-order: This means starting at the left node, then the right node, then visiting the root last. 
+
+To establish a tree within your code, you would first create a Node class.
+
+```python 
+
+class Node {
+
+    def __init__(self, data):
+        # These establish the left and right nodes within the tree. 
+        self.left = None
+        self.right = None
+        # This is a current placeholder for data that we may need to run within our tree.
+        self.data = data
+    
+    # This prints the tree we're establishing within our code. 
+    def PrintTree(self):
+        print(self.data)
+
+}
+
+```
+
+Next, if we wanted to insert data within the tree we've created, we would create an `Insert()` method
+
+```python
+class Node {
+
+    def __init__(self, data):
+        # These establish the left and right nodes within the tree. 
+        self.left = None
+        self.right = None
+        # This is a current placeholder for data that we may need to run within our tree.
+        self.data = data
+    
+    def insert(self, data):
+        # To create a balanced search tree, we would need some comparison operators to put these numbers inside of the right nodes in the data.
+        if self.data:
+            if data < self.data:
+                if self.left is None:
+                    self.left = Node(data)
+                else:
+                    self.left.insert(data)
+            elif data > self.data:
+                if self.right is None:
+                    self.right = Node(data)
+                else:
+                    self.right.insert(data)
+        else:
+            self.data = data
+
+    # This prints the tree we're establishing within our code. 
+    def PrintTree(self):
+        if self.left:
+            self.left.PrintTree()
+        print(self.data),
+        if self.right:
+            self.right.PrintTree()
+
+# Test Code
+# Expected: 3, 6, 12, 14
+root = Node(12)
+root.insert(6)
+root.insert(14)
+root.insert(3)
+root.PrintTree()
+
+```
+
+## Traversing a Tree
+
+First, if we wanted to program a pre-order traversal (Root -> Left -> Right), we would simply code the following. 
+
+```python
+
+def in_order_traversal(self, root):
+    res = []
+    if root:
+        res.append(root.data)
+        res = self.in_order_traversal(root.left)
+        res = res + self.in_order_traversal(root.right)
+    return res
+
+```
+
+If we wanted to program an in-order traversal (Left -> Root -> Right), we would write a method like this:
+
+```python
+
+def in_order_traversal(self, root):
+    res = []
+    if root:
+        res = self.in_order_traversal(root.left)
+        res.append(root.data)
+        res = res + self.in_order_traversal(root.right)
+    return res
+
+```
+
+Finally, if we wanted to program a post-order traversal (Left -> Right -> Root), we would write the following method:
+
+```python
+
+def in_order_traversal(self, root):
+    res = []
+    if root:
+        res = self.in_order_traversal(root.left)
+        res = res + self.in_order_traversal(root.right)
+        res.append(root.data)
+    return res
+
+```
+
+Do you notice a pattern here? We're basically just rearanging the order that we search these nodes in. 
+
+# Problem
 
